@@ -32,19 +32,13 @@ public class ModBlocks {
 		registerBlockItem(name, block, group);
 		return Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, name), block);
 	}
-	private static Item registerBlockItem(String name, Block block, ItemGroup group){
+	private static void registerBlockItem(String name, Block block, ItemGroup group){
 		Item item = Registry.register(Registries.ITEM, new Identifier(TutorialMod.MOD_ID, name),
 			new BlockItem(block, new QuiltItemSettings()));
 		ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.addItem(item));
-
-		return item;
 	}
 	public static void registerModBlocks(){
 		TutorialMod.LOGGER.debug("Registering Mod Blocks for " + TutorialMod.MOD_ID);
-	}
-
-	private static void addToItemGroup(ItemGroup group, Item item){
-		ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.addItem(item));
 	}
 
 }
