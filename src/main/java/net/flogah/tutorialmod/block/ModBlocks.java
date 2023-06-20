@@ -3,9 +3,7 @@ package net.flogah.tutorialmod.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.flogah.tutorialmod.TutorialMod;
 import net.flogah.tutorialmod.item.ModItemGroup;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -27,6 +25,30 @@ public class ModBlocks {
 	public static final Block DEEPSLATE_CITRINE_ORE = registerBlock("deepslate_citrine_ore",
 		new ExperienceDroppingBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool(),
 			UniformIntProvider.create(2, 6)), ModItemGroup.CITRINE);
+
+	public static final Block RED_MAPLE_LOG = registerBlock("red_maple_log",
+		new PillarBlock(QuiltBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
+		ModItemGroup.CITRINE);
+	public static final Block RED_MAPLE_WOOD = registerBlock("red_maple_wood",
+		new PillarBlock(QuiltBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4.0f).requiresTool()),
+		ModItemGroup.CITRINE);
+	public static final Block STRIPPED_RED_MAPLE_LOG = registerBlock("stripped_red_maple_log",
+		new PillarBlock(QuiltBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(4.0f).requiresTool()),
+		ModItemGroup.CITRINE);
+	public static final Block STRIPPED_RED_MAPLE_WOOD = registerBlock("stripped_red_maple_wood",
+		new PillarBlock(QuiltBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(4.0f).requiresTool()),
+		ModItemGroup.CITRINE);
+
+	public static final Block RED_MAPLE_PLANKS = registerBlock("red_maple_planks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4.0f).requiresTool()),
+		ModItemGroup.CITRINE);
+	public static final Block RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
+		new LeavesBlock(QuiltBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4.0f).requiresTool()),
+		ModItemGroup.CITRINE);
+
+	public static final Block RED_MAPLE_SAPLING = registerBlock("red_maple_sapling",
+		new SaplingBlock(null, QuiltBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()),
+		ModItemGroup.CITRINE);
 
 	private static Block registerBlock(String name, Block block, ItemGroup group){
 		registerBlockItem(name, block, group);

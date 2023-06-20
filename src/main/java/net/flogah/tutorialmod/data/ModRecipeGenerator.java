@@ -7,6 +7,7 @@ import net.flogah.tutorialmod.block.ModBlocks;
 import net.flogah.tutorialmod.item.ModItems;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonFactory;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonFactory;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.RecipeCategory;
@@ -41,6 +42,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 			.criterion(FabricRecipeProvider.hasItem(ModItems.CITRINE),
 					FabricRecipeProvider.conditionsFromItem(ModItems.CITRINE))
 			.offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RAW_CITRINE)));
+
+		//redmaple wood
+		offerShapelessRecipe(exporter, ModBlocks.RED_MAPLE_PLANKS, ModBlocks.RED_MAPLE_LOG, "citrine", 4);
 
 	}
 }
