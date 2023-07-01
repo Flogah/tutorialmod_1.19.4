@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "tuorialmod:red_maple_log",
-    "tuorialmod:stripped_red_maple_log",
-    "tuorialmod:red_maple_wood",
-    "tuorialmod:stripped_red_maple_wood"
+    "tutorialmod:red_maple_log",
+    "tutorialmod:stripped_red_maple_log",
+    "tutorialmod:red_maple_wood",
+    "tutorialmod:stripped_red_maple_wood"
   ]
 }

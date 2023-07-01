@@ -20,8 +20,8 @@ public class ModPlacedFeatures {
 		var configuredFeatureRegistryEntryLookup = context.lookup(RegistryKeys.CONFIGURED_FEATURE);
 
 		register(context, RED_MAPLE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getHolderOrThrow(ModConfiguredFeatures.RED_MAPLE_KEY),
-			PlacedFeatureUtil.createCountExtraModifier(1, 0.1f, 2), PlacedFeatureUtil.createWouldSurvivePlacementModifier(ModBlocks.RED_MAPLE_SAPLING));
-			//VegetationPlacedFeatures.modifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2), ModBlocks.RED_MAPLE_SAPLING));
+			//PlacedFeatureUtil.createCountExtraModifier(1, 0.1f, 2), PlacedFeatureUtil.createWouldSurvivePlacementModifier(ModBlocks.RED_MAPLE_SAPLING));
+			VegetationPlacedFeatures.modifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2), ModBlocks.RED_MAPLE_SAPLING));
 	}
 
 	public static RegistryKey<PlacedFeature> registerKey(String name) {

@@ -25,6 +25,6 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {
 		registryBuilder.add(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
-		registryBuilder.add(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		//registryBuilder.add(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }
