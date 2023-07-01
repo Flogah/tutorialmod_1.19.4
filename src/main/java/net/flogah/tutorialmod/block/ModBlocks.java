@@ -3,6 +3,7 @@ package net.flogah.tutorialmod.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.flogah.tutorialmod.TutorialMod;
 import net.flogah.tutorialmod.item.ModItemGroup;
+import net.flogah.tutorialmod.world.tree.RedMapleSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -47,7 +48,7 @@ public class ModBlocks {
 		ModItemGroup.CITRINE);
 
 	public static final Block RED_MAPLE_SAPLING = registerBlock("red_maple_sapling",
-		new SaplingBlock(null, QuiltBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()),
+		new SaplingBlock(new RedMapleSaplingGenerator(), QuiltBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()),
 		ModItemGroup.CITRINE);
 
 	private static Block registerBlock(String name, Block block, ItemGroup group){
